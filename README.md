@@ -54,7 +54,7 @@
 
 ## Découvrir ES6 par le code
 
-[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/decouvrir-es6-par-le-code.php) - [Slides](https://github.com/Swiip/5to6/tree/slides)
+[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/decouvrir-es6-par-le-code.php) - [Slides](http://swiip.github.io/5to6/#/)
 
 * Les navigateurs implémentent ES6, mais pas tout et pas tous
 * Historiquement, traceur de Google, maintenant Babel pour transformer (transpiler) de l'ES6 en ES5
