@@ -9,3 +9,23 @@
 * Utiliser BrowserSync pour appliquer automatiquement les modifications qu'on fait dans un éditeur hors devtools
 * Utiliser Gulp ou Webpack, les deux sont bons mais Webpack a le vent en poupe en ce moment
 * Se mettre à ES6 et au système de modules qu'il propose
+
+## La crypto pour les devs : petit état des lieux des outils d'aujourd'hui et des techniques de demain
+
+[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/la-crypto-pour-les-devs-petit-etat-des-lieux-des-outils-daujourdhui-et-des-techniques-de-demain.php) - [Slides](http://talks.m4dz.net/crypto-pour-les-devs/#/)
+
+* Le plus important c'est la clé, l'algo on s'en fout
+* Ne pas utiliser des combinaisons de fonctions de hashage (ie. `md5(sha1($password))`), c'est pas plus sécurisé qu'une seule fonction de hashage
+* Utiliser un sel unique (en utilisant des vraies techniques de génération de chaînes aléatoires)
+* Le sel doit être unique PAR MOT DE PASSE sinon ça sert à rien, puisque en appliquant le même sel sur le même mot de passe pour 2 utilisateurs, on crée une répétition, et donc une faille
+* Le chiffrement synchrone c'est un peu pourrit car la même clé chiffre et déchiffre, donc si on se la fait voler, le mec fait ce qu'il veut
+* Il faut utiliser le chiffrement asynchrone (RSA)
+* Clé privée : déchiffrement / Clé publique : chiffrement
+* La signature est le fait de chiffrer avec sa clé privée. On peut donc déchiffrer avec la clé publique. Il n'y a pas de sécurité, mais ça permet d'identifier de manière certaine l'auteur
+* L'initiative [Let's Encrypt](https://letsencrypt.org/) va permettre d'obtenir des certificats gratuitement
+* Dans le navigateur, il existe l'API WebCrypto
+* C'est un Working Draft, et la doc est très obscure
+* `window.crypto` / `window.crypto.subtle`
+* `window.crypto.subtle.encrypt` + nom de l'algo, clé publique, data
+* Manipule uniquement des données binaires, il faut donc passer son temps à convertir de et vers du binaire
+* Tous les algos de chiffrement ne sont pas implémentés dans tous les navigateurs, c'est autant la misère que pour les codec pour les API Audio/Video
