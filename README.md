@@ -51,3 +51,21 @@
 * Pas d'attribut `title` vide ou identique à l'intitulé des liens
 * Indiquer "erreur de saisie" dans le `<title>` de la page
 * Pas d'attribut `summary` sur les table, mettre le résumé dans le `<caption>`
+
+## Découvrir ES6 par le code
+
+[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/decouvrir-es6-par-le-code.php) - [Slides](https://github.com/Swiip/5to6/tree/slides)
+
+* Les navigateurs implémentent ES6, mais pas tout et pas tous
+* Historiquement, traceur de Google, maintenant Babel pour transformer (transpiler) de l'ES6 en ES5
+* Sans transpilage, ça fonctionne quand même de mieux en mieux dans les navigateurs récents
+* `let` remplace `var` en lui ajoutant la portée block, il n'y a plus vraiment de cas où il y a une raison d'utiliser `var` plutôt que `let`
+* `const` ne rend pas l'objet impossible à modifier, mais la référence ne peut pas être réassignée
+* Les template strings permettent le multiline et l'utilisation de `${variables}`
+* Angular aime bien les class ES6, à voir ! (le mec a fait sa pres sur un exemple d'app Angular dont le code est disponible sur [https://github.com/Swiip/5to6](https://github.com/Swiip/5to6))
+* Il y a des modules natifs qui s'inspirent grandement de ce que fait NodeJS
+* Pour utiliser les modules, il faut utiliser browserify/webpack (résolution statique des dépendances, packaging dans un seul fichier) ou SystemJS (chargement asynchrone, plus proche de la spécification et de ce que feront les navigateurs à terme)
+* L'isolation des modules est implicite, plus besoin d'IIFE
+* Pour l'asynchrone, il y a les promesses. Ca évite d'avoir des callbacks de callbacks de...
+* On peut chainer les promesses : promise.then().then().then()...
+* Avec les générateurs (`function *laFonction`) on peut interrompre la fonction (points définis avec le mot clé `yield`) et lui réinjecter des données à chaque reprise
