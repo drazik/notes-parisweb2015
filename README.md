@@ -29,3 +29,25 @@
 * `window.crypto.subtle.encrypt` + nom de l'algo, clé publique, data
 * Manipule uniquement des données binaires, il faut donc passer son temps à convertir de et vers du binaire
 * Tous les algos de chiffrement ne sont pas implémentés dans tous les navigateurs, c'est autant la misère que pour les codec pour les API Audio/Video
+
+## Il est beau il est frais mon RGAA 3
+
+[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/il-est-beau-il-est-frais-mon-rgaa-3.php) - [Slides](#)
+
+* Référentiel Général d'Accessibilité pour les Administrations : [spécification](https://references.modernisation.gouv.fr/rgaa-3-0)
+* `role="group"` sur `<figure>` pour lier la légende (`<figcaption>`) à l'image (`<img>`) il faut que le `alt` de l'`<img>` soit la même chose que le contenu du `<figcaption>`
+* `<svg>` décoratif ou porteur de sens
+* Pour un `<svg>` porteur de sens, `<text>` dans le <svg> avec une opacity à 0. Les autres éléments en `aria-hidden="true"`
+* Pour un `<svg>` décoratif, `aria-hidden="true"` directement sur le `<svg>`
+* Pour les médias, alternative à l'extérieur de `<object>` car les lecteurs d'écrans ne savent pas aller voir à l'intérieur de `<object>` pour récupérer l'alternative
+* Pour l'audio, Able Player et MFP video player sont les plus compatibles RGAA, mais ils posent plein d'autres soucis (pas responsive)
+* JS : plus obligé d'avoir des alternatives
+* Tester la restitution dans les lecteurs d'écrans (NVDA, Jaws...)
+* Il faut respecter les [design pattern ARIA](http://www.w3.org/TR/wai-aria-practices/) (modal, accordion...)
+* Utiliser les éléments sémantiques HTML et y ajouter les roles ARIA
+* Ajouter des liens d'accès rapide à la tabulation au clavier
+* Ajout des roles `heading`, `list`, `listitem` pour les cas où ces concepts ne seraient pas représentées par la balise adaptée semantiquement (`<hx>`, `<(u|o)l>`, `<li>`)
+* Plus le droit d'utiliser le px pour le font-size
+* Pas d'attribut `title` vide ou identique à l'intitulé des liens
+* Indiquer "erreur de saisie" dans le `<title>` de la page
+* Pas d'attribut `summary` sur les table, mettre le résumé dans le `<caption>`
