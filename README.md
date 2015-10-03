@@ -69,3 +69,18 @@
 * Pour l'asynchrone, il y a les promesses. Ca évite d'avoir des callbacks de callbacks de...
 * On peut chainer les promesses : promise.then().then().then()...
 * Avec les générateurs (`function *laFonction`) on peut interrompre la fonction (points définis avec le mot clé `yield`) et lui réinjecter des données à chaque reprise
+
+## Un outil pour simplifier le debug web sur toutes les plateformes
+
+[Présentation de la conférence](http://www.paris-web.fr/2015/conferences/conf-sponsor-2-1.php) - [Slides](#)
+
+* Pour debug sur mobiles, il y a soit des outils proprio, soit weinre mais ça vieillit, du coup il ont décidé de créer [VorlonJS](http://vorlonjs.io/)
+* Système client / serveur avec un dashboard qui propose une interface de devtools
+* Ca marche sur un système de plugins (pour ajouter des tabs au dashboard)
+* De base on a un DOM explorer, une console (bidirectionnelle), un object explorer
+* Il y a des plugins pour XHR, les ressources, best practices (analyse statique et dynamique)
+* Pour l'utiliser : `npm install -g vorlon && vorlon`
+* Ajouter `<script src="http://localhot:1337/vorlon.js"></script>` avant tout le reste
+* Ils sont en train de faire un système de proxy pour pouvoir injecter le script dynamiquement sur un site en prod par exemple (pour ne pas avoir à modifier le code)
+* N'importe qui peut écrire un plugin ([documentation](http://vorlonjs.io/documentation/#creating-plugins))
+* La communauté fait un gros boulot, ça fonctionne beaucoup mieux qu'au début
