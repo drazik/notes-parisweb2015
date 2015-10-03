@@ -84,3 +84,17 @@
 * Ils sont en train de faire un système de proxy pour pouvoir injecter le script dynamiquement sur un site en prod par exemple (pour ne pas avoir à modifier le code)
 * N'importe qui peut écrire un plugin ([documentation](http://vorlonjs.io/documentation/#creating-plugins))
 * La communauté fait un gros boulot, ça fonctionne beaucoup mieux qu'au début
+
+## Conférences à rattraper
+
+* [Service workers : reprendre le contrôle du navigateur](http://www.paris-web.fr/2015/conferences/service-workers-reprendre-le-controle-du-navigateur.php)
+* [« Acceptation Générale » mon prénom, mon adresse, mon domaine seront-ils acceptés par tous les formulaires ?](http://www.paris-web.fr/2015/conferences/acceptation-generale-mon-prenom-mon-adresse-mon-domaine-seront-ils-acceptes-par-tous-les-formulaires.php)
+* [« Hey, tu peux reprendre ce projet ? »](http://www.paris-web.fr/2015/conferences/-hey-tu-peux-reprendre-ce-projet.php)
+* [Webperf 2.0](http://www.paris-web.fr/2015/conferences/webperf-20.php)
+* [Le styleguide, bien alimenté il tient ses promesses](http://www.paris-web.fr/2015/conferences/le-styleguide-bien-alimente-il-tient-ses-promesses.php)
+* [Quoi de neuf sous le ciel de la sécurité du web et des internets](http://www.paris-web.fr/2015/conferences/quoi-de-neuf-sous-le-ciel-de-la-securite-du-web-et-des-internets.php)
+* [CSP : Content Security Policy](http://www.paris-web.fr/2015/conferences/csp-content-security-policy.php)
+* [DIY : une console de jeux web](http://www.paris-web.fr/2015/conferences/diy-une-console-de-jeux-web.php)
+* [Pasdecalais.fr, histoire d'une démarche d'accessibilité](http://www.paris-web.fr/2015/conferences/pasdecalaisfr-histoire-dune-demarche-daccessibilite.php)
+* [Découper son application monolithique : Pourquoi ? Comment ?](http://www.paris-web.fr/2015/conferences/decouper-son-application-monolithique-pourquoi-comment.php)
+* [WebGL and WebVR: 3D web today and tomorrow](http://www.paris-web.fr/2015/conferences/webgl-and-webvr-3d-web-today-and-tomorrow.php)
